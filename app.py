@@ -20,8 +20,9 @@ from util import base64_to_pil
 
 
 # Declare a flask app
+from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
-
+run_with_ngrok(app)
 
 # You can use pretrained model from Keras
 # Check https://keras.io/applications/
@@ -93,5 +94,6 @@ if __name__ == '__main__':
     # app.run(port=5002, threaded=False)
 
     # Serve the app with gevent
-    http_server = WSGIServer(('0.0.0.0', 5000), app)
-    http_server.serve_forever()
+    # http_server = WSGIServer(('0.0.0.0', 5000), app)
+    # http_server.serve_forever()
+    app.run()
