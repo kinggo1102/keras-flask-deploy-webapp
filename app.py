@@ -35,11 +35,11 @@ run_with_ngrok(app)
 
 
 # Model saved with Keras model.save()
-#MODEL_PATH = '/content/drive/MyDrive/dataset/model.h5'
+MODEL_PATH = 'model/my_model.h5'
 
 #Load your own trained model
 #model = load_model(MODEL_PATH)
-model = load_model('models/my_model.h5')
+model = load_model('MODEL_PATH')
 model._make_predict_function()          # Necessary
 print('Model loaded. Start serving...')
 
