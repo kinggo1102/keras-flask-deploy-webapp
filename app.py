@@ -39,7 +39,7 @@ run_with_ngrok(app)
 
 #Load your own trained model
 #model = load_model(MODEL_PATH)
-model = load_model('/content/drive/MyDrive/Anh/dataset/my_model.h5')
+model = load_model('models/my_model.h5')
 model._make_predict_function()          # Necessary
 print('Model loaded. Start serving...')
 
