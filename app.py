@@ -35,16 +35,17 @@ run_with_ngrok(app)
 
 
 # Model saved with Keras model.save()
-MODEL_PATH = '/content/drive/MyDrive/dataset/model.h5'
+#MODEL_PATH = '/content/drive/MyDrive/dataset/model.h5'
 
 #Load your own trained model
-model = load_model(MODEL_PATH)
+#model = load_model(MODEL_PATH)
+model = load_model('/content/drive/MyDrive/Anh/dataset/my_model.h5')
 model._make_predict_function()          # Necessary
 print('Model loaded. Start serving...')
 
 
 def model_predict(img, model):
-    img = img.resize((224, 224))
+    img = img.resize((100, 100))
 
     # Preprocessing the image
     x = image.img_to_array(img)
